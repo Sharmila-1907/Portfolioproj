@@ -1,310 +1,365 @@
- @import url('https://fonts.cdnfonts.com/css/games');
- @import url('https://fonts.cdnfonts.com/css/snowy-christa');
+@import url('https://fonts.cdnfonts.com/css/games');
+@import url('https://fonts.cdnfonts.com/css/snowy-christa');
+
+body {
+  background-color: #3D3F46;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  background-color: #121212;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  border: 2px solid #D14974;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  font-size: 1.1rem;
+}
+
+.navbar ul li a {
+  padding: 5px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar ul li a:hover {
+  border-bottom: 2px solid #FFDB70;
+  animation: borderBlink 2s infinite;
+}
+
+div {
+  margin: 3%;
+}
+
+div.a {
+  background-color: #232327;
+  border-radius: 10px;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #D14974;
+  color: #D14974;
+  animation: borderBlink 2s infinite;
+}
+
+.circular-image {
+  border-radius: 50%;
+  width: 20%;
+  /* Set the desired width */
+  height: %;
+  /* Set the desired height */
+  margin-right: 2%;
+  /* Adjust the margin as needed */
+}
+
+.b {
+  text-align: left;
+  border-radius: 12px;
+  border: 5px solid #96888D;
+  animation: borderBlink 2s infinite;
+  margin: 2%;
+  padding: 20px;
+  color: black;
+  animation: bgcolor 4s infinite;
+}
+
+.about {
+  background-color: black;
+  padding: 5px;
+  border-radius: 30px;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  height: 470px;
+  justify-content: center;
+  align-items: center;
+  background-color: #232327;
+  color: #D14974;
+  border: 2px solid #D14974;
+  border-radius: 10px;
+  animation: borderBlink 2s infinite;
+}
+
+.heading {
+  color: #D14974;
+  font-size: 3rem;
+  font-family: 'Snowy Christa', sans-serif;
+  text-align: center;
+  background-color: black;
+  padding: 20px;
+  border-radius: 12px;
+  justify-content: center;
+}
+
+.downloadButton {
+  background-color: #696E7F;
+  /* Green */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  /* Remove underline from the link */
+  display: inline-block;
+}
+
+.downloadButton:hover {
+  background-color: #D14974;
+  color: black;
+  /* Darker green */
+}
+
+.fade-out-element {
+  opacity: 1;
+  /* Initial opacity */
+  transition: opacity 0.5s ease;
+  /* Specify the opacity property and its duration */
+}
+
+.fade-out-element:hover {
+  opacity: 4;
+  /* Target opacity when hovered */
+}
+
+.education {
+  background-color: #232327;
+  border-radius: 10px;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #D14974;
+  color: #D14974;
+  animation: borderBlink 2s infinite;
+}
+
+.contact {
+  background-color: #232327;
+  border-radius: 10px;
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #D14974;
+  color: #D14974;
+  animation: borderBlink 2s infinite;
+}
+
+.contact-content a {
+  display: inline-block;
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  justify-content: center;
+}
+
+/* Style the icons on hover */
+.contact-content a:hover {
+  color: #D14974;
+}
+
+.footer-content {
+  background-color: #232327;
+  color: white;
+  text-align: center;
+  height: 20%;
+}
+
+.skill {
+  background-color: #232327;
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #D14974;
+  animation: borderBlink 2s infinite;
+  color: #D14974;
+}
+
+.skills-title {
+  margin-left: 20px;
+  color: #D14974;
+  background-color: black;
+  padding: 20px;
+  font-family: sans-serif;
+  border-radius: 12px;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skills-item {
+  margin-bottom: 15px;
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h5 {
+  color: white;
+}
+
+.skill-progress-bg {
+  width: calc(100% + 200px);
+  height: 10px;
+  border-radius: 12px;
+  background-color: white;
+  overflow: inherit;
+}
+
+.skill-progress-fill {
+  width: 100%;
+  height: 100%;
+  background-color: #D14974;
+  animation: bgcolor 2s infinite;
+}
+
+[data] {
+  font-weight: bold;
+  margin-left: 10px;
+}
 
 
- body {
-   background-color: #3D3F46;
- }
+@keyframes borderBlink {
 
- .navbar {
-   display: flex;
-   justify-content: center;
-   height: 50px;
-   align-items: center;
-   position: sticky;
-   top: 0;
- }
+  0%,
+  100% {
+    border-color: hotpink;
+  }
 
- .navbar::before {
-   content: "";
-   position: absolute;
-   background-color: #121212;
-   height: 100%;
-   width: 100%;
-   z-index: -1;
-   border: 2px solid #D14974;
- }
+  50% {
+    border-color: lightpink;
+  }
+}
 
- .navbar ul {
-   display: flex;
-   list-style: none;
- }
+@keyframes bgcolor {
 
- .navbar ul li {
-   font-size: 1.1rem;
- }
+  0%,
+  100% {
+    background-color: #DAB0CD;
+  }
 
- .navbar ul li a {
-   padding: 5px 20px;
-   text-decoration: none;
-   color: white;
- }
+  50% {
+    background-color: lightpink;
+  }
+}
+}
 
- .navbar ul li a:hover {
-   border-bottom: 2px solid #FFDB70;
-   animation: borderBlink 2s infinite;
- }
+/* Media Queries for Tablet and Phone Views */
 
- div {
-   margin: 3%;
- }
+@media (max-width: 768px) {
+  /* Adjust styles for tablet and smaller screens */
 
- div.a {
-   background-color: #232327;
-   border-radius: 10px;
-   padding: 5%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: left;
-   font-family: monospace;
-   font-size: 20px;
-   font-weight: bold;
-   border: 2px solid #D14974;
-   color: #D14974;
-   animation: borderBlink 2s infinite;
+  .navbar ul li {
+    font-size: 0.9rem;
+  }
 
- }
+  .navbar ul li a {
+    padding: 5px 15px;
+  }
 
- .circular-image {
-   border-radius: 50%;
-   width: 20%;
-   /* Set the desired width */
-   height: %;
-   /* Set the desired height */
-   margin-right: 2%;
-   /* Adjust the margin as needed */
- }
+  .downloadButton {
+    padding: 8px 15px;
+  }
 
- .b {
-   text-align: left;
-   border-radius: 12px;
-   border: 5px solid #96888D;
-   animation: borderBlink 2s infinite;
-   margin: 2%;
-   padding: 20px;
-   color: black;
-   animation: bgcolor 4s infinite;
+  .circular-image {
+    width: 15%;
+  }
 
- }
+  .b {
+    padding: 15px;
+  }
 
+  .contact-content a {
+    font-size: 1.2em;
+  }
 
- .about {
-   background-color: black;
-   padding: 5px;
-   border-radius: 30px;
- }
+  .h5, [data] {
+    display: block;
+  }
 
- #home {
+  .skill-progress-bg {
+    width: calc(100% + 100px);
+  }
+}
 
-   display: flex;
-   flex-direction: column;
-   height: 470px;
-   justify-content: center;
-   align-items: center;
-   background-color: #232327;
-   color: #D14974;
-   border: 2px solid #D14974;
-   border-radius: 10px;
-   animation: borderBlink 2s infinite;
+@media (max-width: 576px) {
+  /* Adjust styles for phone screens */
 
+  .navbar ul li {
+    font-size: 0.8rem;
+  }
 
- }
+  .navbar ul li a {
+    padding: 5px 10px;
+  }
 
- .heading {
-   color: #D14974;
-   font-size: 3rem;
-   font-family: 'Snowy Christa', sans-serif;
-   text-align: center;
-   background-color: black;
-   padding: 20px;
-   border-radius: 12px;
-   justify-content: center;
+  .downloadButton {
+    padding: 8px 12px;
+  }
 
+  .circular-image {
+    width: 10%;
+  }
 
- }
+  .b {
+    padding: 10px;
+  }
 
- .downloadButton {
-   background-color: #696E7F;
-   /* Green */
-   color: white;
-   padding: 10px 20px;
-   border: none;
-   cursor: pointer;
-   transition: background-color 0.3s;
-   text-decoration: none;
-   /* Remove underline from the link */
-   display: inline-block;
- }
+  .contact-content a {
+    font-size: 1em;
+  }
 
- .downloadButton:hover {
-   background-color: #D14974;
-   color: black;
-   /* Darker green */
- }
+  .h5, [data] {
+    display: block;
+  }
 
- .fade-out-element {
-   opacity: 1;
-   /* Initial opacity */
-   transition: opacity 0.5s ease;
-   /* Specify the opacity property and its duration */
- }
-
- .fade-out-element:hover {
-   opacity: 4;
-   /* Target opacity when hovered */
- }
-
- .education {
-   background-color: #232327;
-   border-radius: 10px;
-   padding: 5%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: left;
-   font-family: monospace;
-   font-size: 20px;
-   font-weight: bold;
-   border: 2px solid #D14974;
-   color: #D14974;
-   animation: borderBlink 2s infinite;
-
- }
-
- .contact {
-
-   background-color: #232327;
-   border-radius: 10px;
-   padding: 5%;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   font-family: monospace;
-   font-size: 20px;
-   font-weight: bold;
-   border: 2px solid #D14974;
-   color: #D14974;
-   animation: borderBlink 2s infinite;
-
- }
-
- .contact-content a {
-   display: inline-block;
-   margin: 0 15px;
-   color: white;
-   text-decoration: none;
-   font-size: 1.5em;
-   justify-content: center;
- }
-
- /* Style the icons on hover */
- .contact-content a:hover {
-   color: #D14974;
- }
-
- .footer-content {
-
-   background-color: #232327;
-   color: white;
-   text-align: center;
-   height: 20%;
-
- }
-
- .skill {
-   background-color: #232327;
-   border-radius: 10px;
-   padding: 25px;
-   display: flex;
-   justify-content: left;
-   align-items: center;
-   text-align: left;
-   font-family: monospace;
-   font-size: 20px;
-   font-weight: bold;
-   border: 2px solid #D14974;
-   animation: borderBlink 2s infinite;
-   color: #D14974;
- }
-
- .skills-title {
-   margin-left: 20px;
-   color: #D14974;
-   background-color: black;
-   padding: 20px;
-   font-family: sans-serif;
-   border-radius: 12px;
- }
-
- .skills-list {
-   list-style: none;
-   padding: 0;
- }
-
- .skills-item {
-   margin-bottom: 15px;
- }
-
- .title-wrapper {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
- }
-
- .h5 {
-   color: white;
- }
-
- .skill-progress-bg {
-   width: calc(100% + 200px);
-   height: 10px;
-   border-radius: 12px;
-   background-color: white;
-   overflow: inherit;
-
- }
-
- .skill-progress-fill {
-   width: 100%;
-   height: 100%;
-   background-color: #D14974;
-   animation: bgcolor 2s infinite;
- }
-
- [data] {
-   font-weight: bold;
-   margin-left: 10px;
- }
-
- /* Display skills and percentages in a single line */
- .h5,
- [data] {
-   display: inline-block;
- }
-
- @keyframes borderBlink {
-
-   0%,
-   100% {
-     border-color: hotpink;
-   }
-
-   50% {
-     border-color: lightpink;
-   }
- }
-
- @keyframes bgcolor {
-
-   0%,
-   100% {
-     background-color: #DAB0CD;
-   }
-
-   50% {
-     background-color: lightpink;
-   }
- }
- }
+  .skill-progress-bg {
+    width: calc(100% + 50px);
+  }
+}
