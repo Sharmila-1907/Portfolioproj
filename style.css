@@ -127,6 +127,7 @@ div.a {
   text-decoration: none;
   /* Remove underline from the link */
   display: inline-block;
+  animation: bgcolor 4s infinite;
 }
 
 .downloadButton:hover {
@@ -186,11 +187,13 @@ div.a {
   text-decoration: none;
   font-size: 1.5em;
   justify-content: center;
+ 
 }
 
 /* Style the icons on hover */
 .contact-content a:hover {
-  color: #D14974;
+  animation: color 2s infinite;
+ 
 }
 
 .footer-content {
@@ -288,6 +291,17 @@ div.a {
     background-color: lightpink;
   }
 }
+
+@keyframes color {
+
+  0%,100%{
+    color: #DAB0CD;
+  }
+
+  50%{
+    color: #D14974;
+  }
+  
 }
 
 /* Media Queries for Tablet and Phone Views */
